@@ -3,7 +3,7 @@
 :root{
     --main-color:#811d3d;
     --black:#1b090e;
-    --bg:#fdebf1;
+    --bg:#fddce7;
     --border: 1rem solid rgba(29, 3, 24, 0.3);
 }
 *{
@@ -14,6 +14,14 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
+}
+.logo{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--main-color)
+}
+.logo span{
+    color: var(--black);
 }
 html{
     font-size: 60%;
@@ -34,6 +42,33 @@ html::-webkit-scrollbar-thumb{
 body{
     background: var(--bg);
 }
+section{
+    padding: 2rem 7%;
+}
+.heading{
+    text-align: center;
+    color: #000000;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+.btn:hover{
+    letter-spacing: 0.5rem;
+}
+
 .header{
     background: var(--bg);
     display: flex;
@@ -81,6 +116,9 @@ body{
     transform: scaleY(0);
     transform-origin: top;
 }
+.header .search-form.active{
+    transform: scaleY(1);
+}
 .header .search-form input{
     height: 100%;
     width: 100%;
@@ -98,40 +136,160 @@ body{
 .header .search-form label:hover{
     color: var(--main-color)
 }
-.header .cart-itens-container{
+.header .cart-items-container{
     position: absolute;
-    top: 100%; right: 0;
+    top: 100%; right: -100%;
     height: calc(100vh - 9.5rem);
     width: 35rem;
     background: #fff;
-    padding:0 1.5rem;
+    padding: 0 1.5rem;
 }
-.header .cart-itens-container .cart-item{
+.header .cart-items-container.active{
+    right: 0;
+}
+.header .cart-items-container .cart-item{
     position: relative;
-    margin:2rem 0;
+    margin: 2rem;
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
-.header .cart-itens-container .cart-item .fa-times{
+.header .cart-items-container .cart-item .fa-times{
     position: absolute;
     top: 1rem; right: 1rem;
     font-size: 2rem;
     cursor: pointer;
     color: var(--black);
 }
-.header .cart-itens-container .cart-item .fa-times:hover{
+.header .cart-items-container .cart-item .fa-times:hover{
     color: var(--main-color);
 }
-.header .cart-itens-container .cart-item img{
+.header .cart-items-container .cart-item img{
     height: 10rem;
 }
-.header .cart-itens-container .cart-item .content h3{
+.header .cart-items-container .cart-item .content h3{
     font-size: 2rem;
     color: var(--black);
-    padding-bottom: .5rem;
+    padding-bottom: 5rem;
 }
-.header .cart-itens-container .cart-item .content .price{
+.header .cart-items-container .cart-item .content .price{
     font-size: 1.5rem;
     color: var(--main-color);
+}
+.header .cart-items-container .btn{
+    width: 100%;
+    text-align: center;
+}
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(imgcap.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home .content{
+    max-width: 60rem;
+}
+.home .content p{
+    font-size: 2.1rem;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #000000;
+}
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h3{
+        font-size: 4.5rem;
+    }
+    .home .content p{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:768px){
+
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+    .header .navbar.active{
+        right: 0;
+    }
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 2rem;
+    }
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+}
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
 }

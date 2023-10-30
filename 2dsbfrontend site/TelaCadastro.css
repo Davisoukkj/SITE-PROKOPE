@@ -2,7 +2,6 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background-image:linear-gradient(45deg, white, #83475e) ;
 }
-
 div {
     background-color: rgb(0, 0, 0.9);
     position: absolute;
@@ -13,14 +12,12 @@ div {
     border-radius: 15px;
     color: #ffffff;
 }
-
 input {
     padding: 10px;
     border: none;
     outline: none;
     font-size: 15px;
 }
-
 .Login {
     border: none;
     background-color: #ffffff;
@@ -29,11 +26,9 @@ input {
     font-size: 20px;
     cursor: pointer;
 }
-
 button:hover {
     background-color: #ffcbcb;
 }
-
 .Cadastro {
     border: none;
     background-color: #ffffff;
@@ -42,7 +37,6 @@ button:hover {
     font-size: 15px;
     cursor: pointer;
 }
-
-h1 {
+h1{
     text-align: center;
 }
